@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Amazon CDS Meetings Sandbox
 
 [![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/aws-samples/amazon-cds-meeting-sandbox)
@@ -163,3 +164,22 @@ Once these have been completed, return to your App and select `Redeploy this ver
 ## Test Locally
 
 Additionally, NextJS can be used locally to develop and test locally. After cloning this repository, add AWS credentials as environment variables in a `.env.local` file. You can then run a development server via `yarn dev`.
+=======
+## My Project
+
+TODO: Fill this README out!
+
+Be sure to:
+
+* Change the title in this README
+* Edit your repository description on GitHub
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
+
+>>>>>>> 2d85cf000bee0e9f46f73cb85a43e520a4371ed8
