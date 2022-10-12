@@ -1,14 +1,12 @@
 div.RemoteVideos {
-  margin-left: 20px;
-  padding: 20px;
   height: 640px;
   width: 640px;
 }
 div.LocalVideo {
   outline-style: solid;
   position: absolute;
-  bottom: 60px;
-  left: 100px;
+  top: 140px;
+  left: 80px;
   height: 180px;
   width: 180px;
 }

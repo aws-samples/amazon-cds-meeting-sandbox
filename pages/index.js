@@ -132,12 +132,9 @@ export default function MeetingComponent() {
         <SpaceBetween direction='vertical' size='l'>
           <div className='RemoteVideos'>
             <RemoteVideos />
+            <div>{audioVideo && <LocalVideo className='LocalVideo' />}</div>
           </div>
-          {audioVideo && (
-            <div className='LocalVideo'>
-              <LocalVideo />
-            </div>
-          )}
+
           <Box>
             <ControlBar
               showLabels={true}
