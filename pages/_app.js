@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import { ThemeProvider } from 'styled-components';
+import {
+  MeetingProvider,
+  lightTheme,
+} from 'amazon-chime-sdk-component-library-react';
+import React from 'react';
+import './styles.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <MeetingProvider>
+        <Component {...pageProps} />
+      </MeetingProvider>
+    </ThemeProvider>
+  );
 }
-
-export default MyApp
