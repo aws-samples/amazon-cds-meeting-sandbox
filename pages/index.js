@@ -124,7 +124,7 @@ export default function MeetingComponent() {
     <ContentLayout
       header={
         <SpaceBetween size='m'>
-          <Header>Header</Header>
+          <Header>Amazon Chime SDK Meeting</Header>
         </SpaceBetween>
       }
     >
