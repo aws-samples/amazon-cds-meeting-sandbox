@@ -45,7 +45,7 @@ This function in `join.js` will use the [AWS SDK for Javascript](https://aws.ama
 
 #### Front End Client
 
-There are two many components required to join an Amazon Chime SDK meeting used in the front end client:
+There are two main components required to join an Amazon Chime SDK meeting used in the front end client:
 
 - Request to back end for meeting information
 - Rendering of video tiles
