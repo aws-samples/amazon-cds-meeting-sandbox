@@ -14,8 +14,6 @@ const config = {
   },
 };
 
-console.log(config);
-
 const chimeSdkMeetingsClient = new ChimeSDKMeetingsClient(config);
 
 export default async function handler(req, res) {
