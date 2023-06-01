@@ -5,6 +5,7 @@ import {
   CreateMeetingCommand,
   CreateAttendeeCommand,
 } from '@aws-sdk/client-chime-sdk-meetings';
+
 const config = {
   region: 'us-east-1',
   credentials: {
@@ -12,6 +13,8 @@ const config = {
     secretAccessKey: process.env.SECRET_ACCESS_KEY,
   },
 };
+
+console.log(config);
 
 const chimeSdkMeetingsClient = new ChimeSDKMeetingsClient(config);
 
