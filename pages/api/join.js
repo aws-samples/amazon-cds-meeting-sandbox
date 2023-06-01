@@ -5,6 +5,7 @@ import {
   CreateMeetingCommand,
   CreateAttendeeCommand,
 } from '@aws-sdk/client-chime-sdk-meetings';
+
 const config = {
   region: 'us-east-1',
   credentials: {
@@ -17,10 +18,13 @@ const chimeSdkMeetingsClient = new ChimeSDKMeetingsClient(config);
 
 export default async function handler(req, res) {
   const requestId = req.body.requestId;
+  console.info(`RequestID: ${requestId}`);
   const meetingInfo = await createMeeting(requestId || randomUUID());
+  console.info(`MeetingInfo: ${meetingInfo}`);
   if (meetingInfo) {
     const attendeeInfo = await createAttendee(meetingInfo.Meeting.MeetingId);
     if (attendeeInfo) {
+      console.info(`AttendeeInfo: ${attendeeInfo}`);
       const responseInfo = {
         Meeting: meetingInfo.Meeting,
         Attendee: attendeeInfo.Attendee,

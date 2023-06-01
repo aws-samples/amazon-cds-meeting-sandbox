@@ -146,19 +146,7 @@ After clicking the above button to deploy to AWS Amplify, we will need to comple
 
 ### Add Environment Variables
 
-In addition to the `ACCESS_KEY_ID` and `SECRET_ACCESS_KEY` environment variables, you should also include `AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE` = `true`. These should be entered as part of the deploy process.
-
-### Adding a Service Role
-
-Because we are deploying an SSR application, AWS Amplify requires a Service Role with [appropriate permissions](https://docs.aws.amazon.com/amplify/latest/userguide/server-side-rendering-amplify.html#ssr-IAM-permissions). These can be [configured](https://docs.aws.amazon.com/amplify/latest/userguide/how-to-service-role-amplify-console.html) through the IAM Console.
-
-### Update Build Settings
-
-In the App settings, select Build settings and Edit. Set the Next.js version to `latest` and the Node.js version to `14`. This will ensure the AWS Lambdas that are created as part of this application use Node version 14.
-
-### Redeploy
-
-Once these have been completed, return to your App and select `Redeploy this version`.
+Be sure to add your `ACCESS_KEY_ID` and `SECRET_ACCESS_KEY` environment variables during the deployment step.  These will be needed during the inital deployment.
 
 ## Test Locally
 
