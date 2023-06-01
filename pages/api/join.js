@@ -17,13 +17,13 @@ const chimeSdkMeetingsClient = new ChimeSDKMeetingsClient(config);
 
 export default async function handler(req, res) {
   const requestId = req.body.requestId;
-  console.info(`RequestID: ${requestId}`)
+  console.info(`RequestID: ${requestId}`);
   const meetingInfo = await createMeeting(requestId || randomUUID());
+  console.info(`MeetingInfo: ${meetingInfo}`);
   if (meetingInfo) {
-    console.info(`MeetingInfo: ${meetingInfo}`)
     const attendeeInfo = await createAttendee(meetingInfo.Meeting.MeetingId);
     if (attendeeInfo) {
-      console.info(`AttendeeInfo: ${attendeeInfo}`)
+      console.info(`AttendeeInfo: ${attendeeInfo}`);
       const responseInfo = {
         Meeting: meetingInfo.Meeting,
         Attendee: attendeeInfo.Attendee,
