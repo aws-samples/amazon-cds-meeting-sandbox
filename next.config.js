@@ -6,9 +6,18 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  amp: true,
+  basePath: '/pages',
 };
 
 module.exports = withPlugins(
   [withTranspileModules(['@cloudscape-design/components'])],
   nextConfig,
 );
+
+module.exports = {
+  i18n: {
+    locales: ['en', 'fr', 'de'],
+    defaultLocale: 'en',
+  },
+};
