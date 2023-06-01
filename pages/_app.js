@@ -5,6 +5,7 @@ import {
 } from 'amazon-chime-sdk-component-library-react';
 import React from 'react';
 import './styles.css';
+import '@cloudscape-design/global-styles';
 
 export default function App({ Component, pageProps }) {
   return (

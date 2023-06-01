@@ -1,19 +1,13 @@
-const withTranspileModules = require('next-transpile-modules');
-const withPlugins = require('next-compose-plugins');
-
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: [
+    '@cloudscape-design/components',
+    '@cloudscape-design/component-toolkit',
+  ],
   compiler: {
     styledComponents: true,
   },
-  amp: true,
-  basePath: '/pages',
 };
-
-module.exports = withPlugins(
-  [withTranspileModules(['@cloudscape-design/components'])],
-  nextConfig,
-);
 
 module.exports = {
   i18n: {
@@ -21,3 +15,5 @@ module.exports = {
     defaultLocale: 'en',
   },
 };
+
+module.exports = nextConfig;
